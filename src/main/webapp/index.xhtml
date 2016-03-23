@@ -20,7 +20,7 @@
                 <rich:popupPanel id="quebec">
                     <a4j:outputPanel id="outer">
                         <a4j:outputPanel id="inner" rendered="#{indexBean.render}">
-                            <ui:include src="greek.xhtml" rendered="#{gamma}">
+                            <ui:include src="#{lambda}" rendered="#{gamma}">
                                 <ui:param name="kappa" value="#{beta}"/>
                             </ui:include>
                         </a4j:outputPanel>
@@ -29,7 +29,7 @@
 
                 <a4j:outputPanel id="romeo">
                     <ui:fragment id="fragment1" rendered="#{gamma}">
-                        <ui:include src="greek.xhtml"/>
+                        <ui:include src="#{lambda}"/>
                     </ui:fragment>
                 </a4j:outputPanel>
             </h:form>

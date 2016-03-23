@@ -48,6 +48,7 @@ public class PhaseListenerImpl implements PhaseListener {
         setValueExpressionToValue("true", "#{delta}");
         setValueExpressionToValue(42, "#{epsilon}");
         setValueExpressionToValue("false", "#{iota}");
+        setValueExpressionToValue("greek.xhtml", "#{lambda}");
 
         // Map an EL variable to an existing ValueExpression.
         mapVariableToValueExpression("zeta", "#{alpha}");
