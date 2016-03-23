@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<ui:component xmlns="http://www.w3.org/1999/xhtml"
+              xmlns:a4j="http://richfaces.org/a4j"
+              xmlns:h="http://xmlns.jcp.org/jsf/html"
+              xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:outputText value="α #{alpha}"/>
+    <br/>
+    β #{beta}
+    <br/>
+    γ #{gamma}
+    <br/>
+    δ #{delta}
+    <br/>
+    ε #{epsilon}
+    <br/>
+    ζ #{zeta}
+    <br/>
+    η #{eta}
+    <br/>
+    θ #{theta}
+    <br/>
+    ι #{iota}
+    <br/>
+    κ #{kappa}
+    <br/>
+    <a4j:commandLink rendered="#{delta and indexBean.render}" 
+                     oncomplete="#{rich:component('quebec')}.hide();" 
+                     action="greek2" value="Close"/>
+</ui:component>
+

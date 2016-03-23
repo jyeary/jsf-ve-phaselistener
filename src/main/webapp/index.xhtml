@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:a4j="http://richfaces.org/a4j"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:rich="http://richfaces.org/rich"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <meta charset="UTF-8"/>
+        <title>Index</title>
+    </h:head>
+    <h:body>
+        <rich:panel header="Welcome to Richfaces">
+            <h:form id="form1">
+                <a4j:commandButton id="xray" action="#{indexBean.updatePage()}" 
+                                   render="outer romeo" 
+                                   execute="@this"
+                                   oncomplete="#{rich:component('quebec')}.show();"/>
+                <br/><br/>
+                <rich:popupPanel id="quebec">
+                    <a4j:outputPanel id="outer">
+                        <a4j:outputPanel id="inner" rendered="#{indexBean.render}">
+                            <ui:include src="greek.xhtml" rendered="#{gamma}">
+                                <ui:param name="kappa" value="#{beta}"/>
+                            </ui:include>
+                        </a4j:outputPanel>
+                    </a4j:outputPanel>
+                </rich:popupPanel>
+
+                <a4j:outputPanel id="romeo">
+                    <ui:fragment id="fragment1" rendered="#{gamma}">
+                        <ui:include src="greek.xhtml"/>
+                    </ui:fragment>
+                </a4j:outputPanel>
+            </h:form>
+        </rich:panel>
+
+    </h:body>
+</html>
